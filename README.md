@@ -20,9 +20,9 @@ First, we have 3 types of audio recordings,
 
 Here is the step to generate the training input audio clips,
 
--Pick a random 10-second background audio clip
--Randomly overlay 0-4 audio clips of "activate" into this 10sec clip
--Randomly overlay 0-2 audio clips of negative words into this 10sec clip
+- Pick a random 10-second background audio clip 
+- Randomly overlay 0-4 audio clips of "activate" into this 10sec clip
+- Randomly overlay 0-2 audio clips of negative words into this 10sec clip
 
 We choose overlay since we want to mix the spoken words with the background noise to sounds more realistic.
 
