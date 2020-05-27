@@ -35,3 +35,19 @@ Why we have 50 timesteps "1"s?
 Because if we only set 1 timestep after the "activate" to "1", there will be too many 0s in the target labels. It creates a very imbalanced training set.
 
 It is a little bit of a hack to have 50 "1" but could make them a little bit easy to train the model. Here is an illustration to show you the idea.
+
+imaaaaaaaaaaaaaaaaage
+
+For a clip which we have inserted "activate", "innocent", activate", "baby." Note that the positive labels "1" are associated only with the positive words.
+
+The green/blueish plot is the spectrogram, which is the frequency representation of the audio wave over time. The x-axis is the time and y-axis is frequencies. The more yellow/bright the color is the more certain frequency is active (loud).
+
+Our input data will be the spectrogram data for each generated audio. And the target will be the labels we created earlier.
+
+Without further due, let's take a look at the model structure.
+imaaaaaaaaaaaaaaaaaage
+
+he 1D convolutional step inputs 5511 timesteps of the spectrogram (10 seconds), outputs a 1375 step output. It extracts low-level audio features similar to how 2D convolutions extract image features. Also helps speed up the model by reducing the number of timesteps.
+
+The two GRU layers read the sequence of inputs from left to right, then ultimately uses a dense+sigmoid layer to make a prediction. Sigmoid make the range of each label between 0~1. Being 1, corresponding to the user having just said "activate".
+
