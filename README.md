@@ -36,7 +36,7 @@ Because if we only set 1 timestep after the "activate" to "1", there will be too
 
 It is a little bit of a hack to have 50 "1" but could make them a little bit easy to train the model. Here is an illustration to show you the idea.
 
-imaaaaaaaaaaaaaaaaage
+![](Images/data_spectogram.png)
 
 For a clip which we have inserted "activate", "innocent", activate", "baby." Note that the positive labels "1" are associated only with the positive words.
 
