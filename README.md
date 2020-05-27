@@ -45,7 +45,7 @@ The green/blueish plot is the spectrogram, which is the frequency representation
 Our input data will be the spectrogram data for each generated audio. And the target will be the labels we created earlier.
 
 Without further due, let's take a look at the model structure.
-![](images/model.png)
+![](Images/model.png)
 
 he 1D convolutional step inputs 5511 timesteps of the spectrogram (10 seconds), outputs a 1375 step output. It extracts low-level audio features similar to how 2D convolutions extract image features. Also helps speed up the model by reducing the number of timesteps.
 
